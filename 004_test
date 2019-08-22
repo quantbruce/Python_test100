@@ -1,0 +1,49 @@
+4.输入某年某月某日，判断这一天是这一年的第几天？
+
+## My Methods
+
+num = 0
+
+def ymd_fun(y, m, d):
+    global num
+    s = m
+    if y % 4 != 0:
+        for ind in range(12):
+            if m > month[ind]:
+                num += day_365[ind]
+                m = month[ind]
+        print('平年，{0}年-{1}月-{2}日是该年的第{3}天'.format(y, s, d, num + d))
+    else:
+        for ind in range(12):
+            if m > month[ind]:
+                num += day_366[ind]
+                m = month[ind]
+        print('闰年，{0}年-{1}月-{2}日是该年的第{3}天'.format(y, s, d, num + d))
+
+
+
+y = int(input('请输入年: '))
+m = int(input('请输入月: '))
+d = int(input('请输入日: '))
+ymd_fun(y, m, d)
+
+
+#### Answer
+分析：以3月5日为例，应该先把前两个月的加起来，然后再加上5天即本年的第几天，特殊情况，闰年且输入月份大于2时需考虑多加一天：
+year = int(raw_input('year:\n'))
+month = int(raw_input('month:\n'))
+day = int(raw_input('day:\n'))
+ 
+months = (0,31,59,90,120,151,181,212,243,273,304,334)
+if 0 < month <= 12:
+    sum = months[month - 1]
+else:
+    print 'data error'
+sum += day
+leap = 0
+if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0)):
+    leap = 1
+if (leap == 1) and (month > 2):
+    sum += 1
+print 'it is the %dth day.' % sum
+
