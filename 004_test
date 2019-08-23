@@ -18,7 +18,7 @@ def ymd_fun(y, m, d):
                 num += day_365[ind]
                 m = month[ind]
         print('平年，{0}年-{1}月-{2}日是该年的第{3}天'.format(y, s, d, num + d))
-    else:
+    elif y % 4 == 0 or (y % 100 == 0 and y % 400 == 0):
         for ind in range(12):
             if m > month[ind]:
                 num += day_366[ind]
