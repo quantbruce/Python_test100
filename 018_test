@@ -7,7 +7,7 @@ def similar_sum(x, n):
     for i in range(n):
         lst_a.append(x*10**i)
         lst_b += lst_a
-    print(sum(lst_b))
+    print('全体数值求和为：%d' % sum(lst_b))
 
 if __name__ == '__main__':
     x = int(input('请输入a: '))
