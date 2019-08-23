@@ -21,7 +21,7 @@ Sn = []
 n = int(raw_input('n = '))
 a = int(raw_input('a = '))
 for count in range(n):
-    Tn = Tn + a
+    Tn = Tn + a             # 2，22，222，2222，22222这样去理解递归，在原来的基础上*10倍再+原来的数
     a = a * 10
     Sn.append(Tn)
     print Tn
