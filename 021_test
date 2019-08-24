@@ -4,7 +4,7 @@
 def peach(deadline):
     x1 = 1
     for i in range(deadline, 0, -1):
-        x2 = 2*(x1+1)
+        x2 = 2*(x1+1)   # 对于这两行这种递归式，自己要多做总结。对这个套路敏感
         x1 = x2
     print('第一天共摘了 %d 个桃子' % x1)
 
