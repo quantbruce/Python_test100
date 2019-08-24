@@ -16,8 +16,8 @@ def wanshu(num):
         if s == 0:
             print('打印完数: ', i, end='\n')
             for q in range(n):
-                print(str(k[q]), end='+')
-            print(k[n])
+                print(str(k[q]), end='+')  # 把之间含‘+’的全部输入，‘+’的数目就是n-1
+            print(k[n])  # 把k中最后一个数也补上，但是它后面不再需要'+'
 
 
 if __name__ == '__main__':
