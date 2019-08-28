@@ -20,9 +20,9 @@ if __name__ == '__main__':
     palindromes(n)
     
     
- #### Answer  (Best Methods)
+ #### Answer  (Best Methods)   ## 这个方法是最佳的，最老司机的，不会受到是几位数的限制
  
-a = int(input("请输入一个数字:\n"))
+a = int(input("请输入一个数字:\n"))  
 x = str(a)
 flag = True
 
