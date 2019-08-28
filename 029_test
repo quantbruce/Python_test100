@@ -29,7 +29,7 @@ if __name__ == '__main__':
     n = int(input('请输入数字n ='))
     fun_29(n)
     
-    #### Maybe Best Method
+ ################################# Maybe Best Method
     def backn(n):
     ls = str(n); s = len(ls)
     ls = ls[s-1:0:-1] + ls[0]
@@ -37,6 +37,12 @@ if __name__ == '__main__':
 
 print(backn(12346))
     
+ ###############################  Best Method
+num = list(input('输入一个最多5位的数字:'))   # 这一步很关键，可以在一开始输入的时候，就将一个元素用列表打散成若干个数字
+print(len(num))
+num.reverse()
+for i in range(len(num)):
+    print(num[i], end='')           # 这个end=''的细节也很重要，因为可以使默认的end='\n'竖着排列变成 横行排列，紧贴着的
     
     
     
