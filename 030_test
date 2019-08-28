@@ -26,9 +26,9 @@ a = int(input("请输入一个数字:\n"))
 x = str(a)
 flag = True
 
-for i in range(len(x) // 2):
-    if x[i] != x[-i - 1]:
-        flag = False
+for i in range(len(x) // 2):   # 半渡击之，记住这个套路
+    if x[i] != x[-i - 1]:   #  首位呼应，记住这个套路
+        flag = False    
         break
 if flag:
     print("%d 是一个回文数!" % a)
