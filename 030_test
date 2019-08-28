@@ -1,0 +1,39 @@
+30. 题目：一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。
+
+####My Methods
+def palindromes(n):
+    a = n // 10000
+    b = n % 10000 // 1000
+    c = n % 1000 // 100  # 这个c其实没太大用
+    d = n % 100 // 10
+    e = n % 10
+    if len(str(n))!=5:
+        print('输入的位数不等于5！请重新输入！')
+    elif a != 0 and a == e and b == d:
+        print('%d 是一个回文数' % n)
+    else:
+        print('%d 不是一个回文数' % n)
+
+
+if __name__ == '__main__':
+    n = int(input('请输入一个5位数: n = '))
+    palindromes(n)
+    
+    
+ #### Answer  (Best Methods)
+ 
+a = int(input("请输入一个数字:\n"))
+x = str(a)
+flag = True
+
+for i in range(len(x) // 2):
+    if x[i] != x[-i - 1]:
+        flag = False
+        break
+if flag:
+    print("%d 是一个回文数!" % a)
+
+else:
+    print("%d 不是一个回文数!" % a)
+    
+    
