@@ -36,7 +36,7 @@ if __name__ == "__main__":
         print(l[i])
     print()
 
-    for i in range(N-1):
+    for i in range(N-1):   # 这个i实际上是控制这两个元素交换的次数，所以是N-1
         min = i
         for j in range(i+1, N):
             if l[min] > l[j]:
