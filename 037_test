@@ -1,0 +1,47 @@
+37.题目：对10个数进行排序。
+
+#### My Method
+def compare_ten(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, flag=True):
+    list = [x1, x2, x3, x4, x5, x6, x7, x8, x9, x10]
+    if flag == True:
+        print(sorted(list))
+    elif flag == False:
+        print(sorted(list, reverse=True))
+
+
+if __name__ == '__main__':
+    x1 = int(input('请输入x1='))
+    x2 = int(input('请输入x2='))
+    x3 = int(input('请输入x3='))
+    x4 = int(input('请输入x4='))
+    x5 = int(input('请输入x5='))
+    x6 = int(input('请输入x6='))
+    x7 = int(input('请输入x7='))
+    x8 = int(input('请输入x8='))
+    x9 = int(input('请输入x9='))
+    x10 = int(input('请输入x10='))
+    compare_ten(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, flag=False)
+
+
+#### Answer   (被卡了很久，有精髓部分值得反复推敲)
+if __name__ == "__main__":
+    N = 10
+    # input data
+    print('请输入10个数字:\n')
+    l = []
+    for i in range(N):
+        l.append(int(input('输入一个数字:\n')))
+    print()
+    for i in range(N):
+        print(l[i])
+    print()
+
+    for i in range(N-1):
+        min = i
+        for j in range(i+1, N):
+            if l[min] > l[j]:
+                min = j  # 也就是下标最小的此时暂时取j(告诉系统，此时体系里局部最小的下标是j)
+            l[min], l[i] = l[i], l[min]   # 把上面遍历比较完后较小的l[min]放到了最左边，然后依次
+        print('排列之后：')
+        for i in range(N):
+            print(l[i])
