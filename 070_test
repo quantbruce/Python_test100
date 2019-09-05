@@ -1,0 +1,11 @@
+70.
+
+#### My  Method
+
+def str_length(s):
+    # s = str(input('请输入一系列字符串：'))
+    print('该字符串的长度为%d: ' % len(s))
+
+if __name__ == '__main__':
+    s = str(input('请输入一系列字符串：'))
+    str_length(s)
