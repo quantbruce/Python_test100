@@ -1,0 +1,24 @@
+69.
+
+#### Other Method
+def fun_69(n): # n 为人数
+    list = []
+    [list.append(i) for i in range(1, n+1)]
+    sum = 0
+
+    while True:  # while True则是保证一直是满足条件时一直首尾循环。
+        t = 0   # t可以放在此处，因为后面累加的t是在条件语句中，但是sum不能放在while True下面，值会引起混乱
+        for i in range(1, len(list)+1):
+            sum += 1   # 这里的sum巧妙地代替了下标的变化
+            if sum % 3 == 0:
+                list.pop(i-1-t)
+                t += 1   # 这里的t实际上是记录，剔除元素的个数，剔除一个元素，list长度缩减1，被剔除之后的元素下标比原来小1
+                         # 然后其他以此内推
+        if len(list) == 1:
+            print('最后剩下的一个人是: %d' % list[0])
+            break
+
+
+if __name__ == '__main__':
+    n = int(input('请输入总人数n = '))
+    fun_69(n)
