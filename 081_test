@@ -1,0 +1,12 @@
+81.
+
+#### My Method
+
+for i in range(10, 100):
+    condition1 = 809*i == 800*i + 9*i
+    condition2 = 999 < 809 * i < 10000
+    condition3 = 9 < 8 * i < 100
+    condition4 = 99 < 9 * i < 1000
+    while condition1 and condition2 and condition3 and condition4:
+        print('满足该条件的两位数为%d, 且809*%d=%d' % (i, i, 809*i))
+        break
