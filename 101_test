@@ -1,0 +1,19 @@
+101.Python - 获取 100 以内的质数
+
+#### Answer and other
+def find_prime_within(n):
+    ls = []
+    for i in range(2, n+1):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            ls.append(i)
+    print(ls)
+
+
+find_prime_within(100)
+
+#### Other Method
+s = [n for n in range(1, 100) if not [m for m in range(2, n) if n % m == 0]]  
+print(s)
