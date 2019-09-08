@@ -1,0 +1,19 @@
+100.题目：列表转换为字典。
+
+
+#### Answer
+list = ['Jordan', 'Bruce', 'Kobe', 'James', 'Masato']
+height = [198, 173, 198, 203, 174, 180]
+print(dict(zip(list, height)))
+
+
+#### Other Method
+r = range(ord('a'), ord('z') + 1)
+a = (i for i in r)
+b = map(chr, r)
+print(dict(zip(a, b)))
+
+
+#### zip()、map()函数得用法，顺便学习
+###体会：zip()相对于，让两个列表里得元素以元组的形式，两两配对，数目以列表元素较少得为准，多出的不会显示。
+###体会：map()相对于，R里面得pply家族，实现批量化向量化运算，输进去一个计算列表，通过该函数分别计算，映射输出一个对应计算列表
